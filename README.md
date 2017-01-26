@@ -7,6 +7,13 @@
 * [Pathogen.vim](https://github.com/tpope/vim-pathogen)
 * [Conque-Shell](https://github.com/lrvick/Conque-Shell)
 
+
+## binding shorcut
+
+		<F2> -> toogle NERDTree
+		<C-d> -> debug the current nodejs file (require npm install -g vimdebug)
+
+
 ## [Vim-node](https://github.com/moll/vim-node)
 
 Using
