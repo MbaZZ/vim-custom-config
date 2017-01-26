@@ -170,6 +170,7 @@ Vous pouvez entrer le caractère en majuscule ou en minuscule. Le résultat est 
 ### Commandes (shell)
 
 Certains caractères permettent de passer en mode commande, avec l’accord de l’administrateur de la machine.
+
 		 : !	Le caractère ’ :’ (deux points) suivi du ’ !’ (point d’exclamation) permet d’afficher le résultat de la commande shell au bas de la fenêtre sans modifier votre fichier. Pressez Esc pour revenir au mode précédent.
 		 !!	Deux points d’exclamation qui se suivent permettent d’insérer le résultat de la commande shell dans la fenêtre d’édition. Par exemple, ’ !!date’ insére la date courante à la position du curseur (remplace la ligne courante).
 
@@ -177,6 +178,7 @@ Certains caractères permettent de passer en mode commande, avec l’accord de l
 ### Substitutions
 
 La ligne de commande propose un outil puissant de substitution :
+
 		:s/celi/cela/	Placé sur la bonne ligne, ceci sera remplacé par cela. Les autres lignes ne sont pas modifiées.
 		:$s/ceci/cela/	Le ’s’ précédé par ’$’ (symbole dollar) : la modification sera appliquée à la dernière ligne du fichier (substitution sélective).
 		:%s/ceci/cela/	Le ’s’ précédé par ’%’ (symbole pour cent) : la modification sera appliquée à l’ensemble du fichier (substitution globale).
@@ -185,7 +187,6 @@ La ligne de commande propose un outil puissant de substitution :
 ### Multifichiers
 
 vim permet de travailler sur plusieurs fichiers en même temps. Par exemple en lançant sous shell ’vi fichier1 fichier2 fichier3’.
-
 
 		:e#	Passe d’un fichier en mémoire au suivant.
 		:n	Passe au fichier suivant dans la liste des fichiers ouverts.
