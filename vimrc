@@ -9,3 +9,5 @@ set nocompatible
 inoremap ( ()<left>
 let g:javascript_plugin_jsdoc = 1
 map <F2> :NERDTreeToggle<CR>
+:hi Directory guifg=#FF0000 ctermfg=red
+let g:NERDTreeFileExtensionHighlightFullName = 1
