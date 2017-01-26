@@ -6,10 +6,6 @@
 * [NERDTree](https://github.com/scrooloose/nerdtree)
 * [Pathogen.vim](https://github.com/tpope/vim-pathogen)
 
-## 
-
-
-
 
 ## [Vim-node](https://github.com/moll/vim-node)
 
@@ -192,3 +188,4 @@ vim permet de travailler sur plusieurs fichiers en même temps. Par exemple en l
 		:n	Passe au fichier suivant dans la liste des fichiers ouverts.
 		:e <fichier-Y>	Ouvre le fichier <fichier> en édition.
 		:args	Liste des fichiers ouverts en mémoire.
+
