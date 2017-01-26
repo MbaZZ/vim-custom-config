@@ -5,7 +5,7 @@
 * [vim-javascript](https://github.com/pangloss/vim-javascript)
 * [NERDTree](https://github.com/scrooloose/nerdtree)
 * [Pathogen.vim](https://github.com/tpope/vim-pathogen)
-
+* [Conque-Shell](https://github.com/lrvick/Conque-Shell)
 
 ## [Vim-node](https://github.com/moll/vim-node)
 
@@ -34,18 +34,6 @@ autocmd User Node
   \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
   \ endif
 ```
-
-
-License
--------
-Node.vim is released under a *Lesser GNU Affero General Public License*, which in summary means:
-
-- You **can** use this program for **no cost**.
-- You **can** use this program for **both personal and commercial reasons**.
-- You **do not have to share your own program's code** which uses this program.
-- You **have to share modifications** (e.g bug-fixes) you've made to this program.
-
-For more convoluted language, see the `LICENSE` file.
 
 ## [VIM : Commandes de base](http://www.quesaco.org/Les-commandes-clavier-de-l-editeur-vim)
 
@@ -198,3 +186,24 @@ vim permet de travailler sur plusieurs fichiers en même temps. Par exemple en l
 		:e <fichier-Y>	Ouvre le fichier <fichier> en édition.
 		:args	Liste des fichiers ouverts en mémoire.
 
+
+## [Conque-Shell](https://github.com/lrvick/Conque-Shell)
+		
+## Usage
+
+Type :ConqueTerm <command> to run your command in vim, for example:
+
+		:ConqueTerm bash
+		:ConqueTerm mysql -h localhost -u joe -p sock_collection
+		:ConqueTerm Powershell.exe
+		:ConqueTerm C:\Python27\python.exe
+
+To open ConqueTerm in a new horizontal or vertical buffer use:
+
+		:ConqueTermSplit <command>
+		:ConqueTermVSplit <command>
+		:ConqueTermTab <command>
+
+All text typed in insert mode will be sent to your shell. Use the <F9> key to send a visual selection from any buffer to the shell.
+
+For more help type :help ConqueTerm
