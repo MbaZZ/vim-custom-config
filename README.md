@@ -24,26 +24,30 @@ Open any JavaScript file inside a Node project and you're all set.
 - Use `:Nedit .` to edit your Node projects main (usually `index.js`) file.
 
 #### Want to customize settings for files inside a Node projects?
-Use the `Node` autocommand. For example:
-```vim
-autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
-```
 
-#### Want `<C-w>f` to open the file under the cursor in a new vertical split?
-`<C-w>f` by default opens it in a horizontal split. To have it open vertically, drop this in your `vimrc`:
-```vim
-autocmd User Node
-  \ if &filetype == "javascript" |
-  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
-  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
-  \ endif
-```
+Use the `Node` autocommand. For example:
+		```vim
+				autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
+		```
+
+		Want `<C-w>f` to open the file under the cursor in a new vertical split?
+		
+		`<C-w>f` by default opens it in a horizontal split. To have it open vertically, drop this in your `vimrc`:
+
+		```vim
+				autocmd User Node
+				  \ if &filetype == "javascript" |
+				  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+				  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+				  \ endif
+		```
 
 ## [VIM : Commandes de base](http://www.quesaco.org/Les-commandes-clavier-de-l-editeur-vim)
 
 ### Déplacement
 
 Pour déplacer le curseur dans un document ouvert, vous devez être en mode commande. Si vous êtes en mode insertion, presse Esc pour passer en mode commande.
+
 		h	Déplace le curseur d’un caractère sur le gauche.
 		j	Déplace le curseur d’un caractère vers le bas.
 		k	Déplace le curseur d’un caractère vers le haut.
@@ -70,11 +74,13 @@ Pour déplacer le curseur dans un document ouvert, vous devez être en mode comm
 		:k<char>	Marquer la position courante (le contexte) par le caractère <char>. Par exemple, entrez :ka marquera la position du curseur par la lettre ’a’. Plus loin, pour revenir à cette position ’a’, entrez en mode commande ’a ou `a.
 		m<char>	’ idem :k<char>
 		Q	Quitter le mode vi et passer en mode ex. On se retrouve en mode commande, sur la ligne de commande. Pour repasser en mode vi, dans cette ligne de commande, entrez ’vi’.
+		
 Vous pouvez également vous déplacer simplement en utilisant les touches de déplacement de curseur (flèches, haut, bas, ou top, etc.)..
 
 ### Rechercher
 
 Pour effectuer une recherche dans le texte courant (celui affiché à l’écran de vi), vous devez être en mode commande.
+
 		/<texte>	La barre oblique qui précède apparaît dans la ligne de recherche en bas d’écran lors de la frappe. Si elle apparaît dans le texte courant, c’est que vous êtes en mode insertion. Pour sortir de ce mode insertion, pressez Esc.
 		 ?	Cherche l’occurrence avant la position courante du curseur.
 		/	Après une première recherche (voir ci-dessus), cherche l’occurrence suivante.
@@ -108,6 +114,7 @@ Pour effectuer une recherche dans le texte courant (celui affiché à l’écran
 ### Couper, Copier et Coller
 
 Pour copier/coller du texte, vous devez être en mode commande. Si vous êtes en mode insertion, presse Esc pour passer en mode commande.
+
 		cc	Supprime le texte de la ligne courante et positionne le curseur au début de cette ligne.
 		d^	Couper du début de la ligne jusqu’au curseur.
 		dd	Couper (supprimer) la ligne de texte qui se trouve sous le curseur. Si vous voulez couper plusieurs lignes en même temps, précédez dd du nombre de lignes concernées. Par exemple ’8dd’ coupe la ligne où se trouve le cuseur, et les 7 lignes suivantes, et les recopient dans le tampon. A noter que d8d et 8dd signifient la même chose.
@@ -119,9 +126,11 @@ Pour copier/coller du texte, vous devez être en mode commande. Si vous êtes en
 		C	Sélectionne de la position courante à la fin de la ligne et permet la substitution du texte.
 		D	Supprime le texte de la position courante du curseur à la fin de la ligne.
 		
+		
 ### Sauvegarder et Quitter
 
 Pour sauvegarder ou quitter vi, vous devez être en mode commande. Si vous êtes en mode insertion, presse Esc pour passer en mode commande.
+
 		:w	Sauvegarde le fichier courant. Le nom de fichier orginal est conservé.
 		:w !	Force la sauvegarde du fichier courant (cas par exemple lorsqu’on lance vi via view). Le nom de fichier orginal est conservé.
 		:w <filename>	Sauvegarde le fichier courant sous le nom de fichier <filename>.
@@ -130,12 +139,14 @@ Pour sauvegarder ou quitter vi, vous devez être en mode commande. Si vous êtes
 		:wq <filename>	Sauvegarde le fichier courant sous le nom de fichier <filename> et quitte vi.
 		:q	Quitte vi. Si un fichier en cours a été modifié, vi prévient l’utilisateur.
 		:q !	Abandon de vi. Quitte sans sauvegarder.
+		
 Voir également la commande :r qui permet de lire un fichier et de l’insérer dans l’édition courante.
 
 ### Commandes à l’aide de la touche <control>
 
 Vous devez simultanément presser la touche Ctrl et le caractère de commande pour obtenir l’effet désiré, le tout en mode commande. Si vous êtes en mode insertion, presse Esc pour passer en mode commande.
 Vous pouvez entrer le caractère en majuscule ou en minuscule. Le résultat est identique.
+
 		^A	Renvoie le curseur sur la prochaine occurrence du mot se trouvant actuellement sous le curseur. Si manquant, recommence la recherche à partir du début du fichier.
 		^B	Remonte d’une page. Pour remonter de plusieurs pages, précéder d’un chiffre : le nombre de pages souhaité.
 		^D	Défilement de l’écran, déplace le curseur d’une ligne. Précédé d’un chiffre (nombre de lignes), la commande déplacera d’autant la position du curseur.
@@ -174,6 +185,8 @@ La ligne de commande propose un outil puissant de substitution :
 ### Multifichiers
 
 vim permet de travailler sur plusieurs fichiers en même temps. Par exemple en lançant sous shell ’vi fichier1 fichier2 fichier3’.
+
+
 		:e#	Passe d’un fichier en mémoire au suivant.
 		:n	Passe au fichier suivant dans la liste des fichiers ouverts.
 		:e <fichier-Y>	Ouvre le fichier <fichier> en édition.
