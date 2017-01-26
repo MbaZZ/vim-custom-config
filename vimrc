@@ -8,3 +8,4 @@ colorscheme Tomorrow-Night
 set nocompatible
 inoremap ( ()<left>
 let g:javascript_plugin_jsdoc = 1
+map <F2> :NERDTreeToggle<CR>
