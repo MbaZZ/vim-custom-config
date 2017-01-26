@@ -9,7 +9,7 @@
 
 ## [Vim-node](https://github.com/moll/vim-node)
 
-Using 
+Using
 -----
 Open any JavaScript file inside a Node project and you're all set.
 
@@ -20,23 +20,32 @@ Open any JavaScript file inside a Node project and you're all set.
 - Use `:Nedit .` to edit your Node projects main (usually `index.js`) file.
 
 #### Want to customize settings for files inside a Node projects?
-
 Use the `Node` autocommand. For example:
-		```vim
-				autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
-		```
+```vim
+autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
+```
 
-		Want `<C-w>f` to open the file under the cursor in a new vertical split?
-		
-		`<C-w>f` by default opens it in a horizontal split. To have it open vertically, drop this in your `vimrc`:
+#### Want `<C-w>f` to open the file under the cursor in a new vertical split?
+`<C-w>f` by default opens it in a horizontal split. To have it open vertically, drop this in your `vimrc`:
+```vim
+autocmd User Node
+  \ if &filetype == "javascript" |
+  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+  \ endif
+```
 
-		```vim
-				autocmd User Node
-				  \ if &filetype == "javascript" |
-				  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
-				  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
-				  \ endif
-		```
+
+License
+-------
+Node.vim is released under a *Lesser GNU Affero General Public License*, which in summary means:
+
+- You **can** use this program for **no cost**.
+- You **can** use this program for **both personal and commercial reasons**.
+- You **do not have to share your own program's code** which uses this program.
+- You **have to share modifications** (e.g bug-fixes) you've made to this program.
+
+For more convoluted language, see the `LICENSE` file.
 
 ## [VIM : Commandes de base](http://www.quesaco.org/Les-commandes-clavier-de-l-editeur-vim)
 
