@@ -1,10 +1,10 @@
 
 # Contenu
 
-* (vim-node)[https://github.com/moll/vim-node]
-* (vim-javascript)[https://github.com/pangloss/vim-javascript]
-* (NERDTree)[https://github.com/scrooloose/nerdtree]
-* (Pathogeni.vim)[https://github.com/tpope/vim-pathogen]
+* [vim-node](https://github.com/moll/vim-node)
+* [vim-javascript](https://github.com/pangloss/vim-javascript)
+* [NERDTree](https://github.com/scrooloose/nerdtree)
+* [Pathogeni.vim](https://github.com/tpope/vim-pathogen)
 
 
 ## Node.vim
