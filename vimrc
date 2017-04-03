@@ -23,3 +23,11 @@ endfunction
 
 " launch debug on ctrl-d
 nnoremap <C-d> :call DebugJs()<CR>   
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
+
+" Highlight the current line
+set cursorline
