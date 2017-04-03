@@ -31,3 +31,5 @@ let &t_te.="\e[0 q"
 
 " Highlight the current line
 set cursorline
+
+set background=dark
